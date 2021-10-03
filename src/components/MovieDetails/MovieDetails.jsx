@@ -1,7 +1,20 @@
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
 
 function MovieDetails() {
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const backToMovieList = () => {
+        history.push('/')
+    }
     return(
-        <div></div>
+        <div>
+            <h2>Movie Details for ???</h2>
+            <button onClick={backToMovieList}>Back To Movie List</button>
+        </div>
+
     )
 }
 

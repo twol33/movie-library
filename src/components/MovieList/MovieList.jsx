@@ -17,9 +17,14 @@ function MovieList() {
         history.push('/details')
     }
 
+    const goToAddMovie = () => {
+    history.push('/addMovie')
+  }
+
     return (
         <main>
             <h1>MovieList</h1>
+            <button onClick={goToAddMovie}>Add a New Movie</button>
             <section className="movies">
                 {movies.map(movie => {
                     return (

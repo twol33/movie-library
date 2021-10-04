@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 function MovieNewAdd() {
 
-    let updateObjects ={
-        title: '',
+    let updateObjects = {
+        title: ' ',
         description: '',
         poster: '',
         genre_id: '',
@@ -14,9 +14,11 @@ function MovieNewAdd() {
 
     const dispatch = useDispatch();
 
-    const handleSubmit = (newMovie) => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
         dispatch({ type: 'POST_NEW_MOVIE', payload: newMovie })
         console.log(newMovie);
+        history.push('/')
     }
 
     return(
@@ -53,7 +55,7 @@ function MovieNewAdd() {
                     value={newMovie.genre_id} 
                     onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} 
                 />
-                <button type='submit'>Submit</button>
+                <button type='submit' >Save</button>
             </form>
         </div>
     )

@@ -10,7 +10,6 @@ import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { AccordionSummary } from '@material-ui/core';
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
@@ -31,9 +30,9 @@ function* fetchMovieDetails( action ){
 function* postNewMovie( action ){
     try{
         yield axios.post('/api/movie', action.payload);
-        yield put({ type: 'FETCH_MOVIES' });
+        // yield put({ type: 'FETCH_MOVIES' });
     }catch (error) {
-        console.log('Error in post new moviw=e');
+        console.log('Error in post new movie', error);
         alert('Unable to add new movie')
     }
 }

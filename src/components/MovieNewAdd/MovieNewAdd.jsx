@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useState } from 'react';
 import { useHistory } from "react-router";
+import { createPopper } from '@popperjs/core';
 
 function MovieNewAdd() {
     const dispatch = useDispatch();
@@ -54,12 +55,29 @@ function MovieNewAdd() {
                     onChange={ (event) => setNewMovie({...newMovie, poster: event.target.value })} 
                 />
 
-                <input 
+                {/* <input 
                     type='text' 
                     placeholder='Genre' 
                     value={newMovie.genre_id} 
                     onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} 
-                />
+                /> */}
+
+                <select name='selectList' id='select-list'>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Adventure</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Animated</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Biographical</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Comedy</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Disaster</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Drama</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Epic</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Fantasy</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Musical</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Romantic</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Science Fiction</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Space-Opera</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Superhero</option>
+                </select>
+
                 <button type='submit' >Save</button>
                 <button onClick={cancelGo}>Cancel</button>
             </form>

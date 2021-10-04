@@ -5,20 +5,25 @@ import { useHistory } from 'react-router';
 function MovieDetails() {
     const dispatch = useDispatch();
     const history = useHistory();
-
-    useEffect( () => {
-        dispatch({ type: 'FETCH_MOVIE_DETAILS' })
-    }, [])
+    const movie = useSelector( store => store.details );
+    const genre = useSelector( store => store.genre);
+    console.log(movie);
+    
+    let movieToDisplay = {}
+    movieToDisplay = movie
 
     const backToMovieList = () => {
         history.push('/')
     }
     return(
-        <div>
-            <h2>Movie Details for ???</h2>
-
+        <div key={ movie.id }>
+            <p>{ movieToDisplay.description }</p>
+            {genre.map( genres => (
+                <p>{genres.name}</p>
+            ))}
             <button onClick={backToMovieList}>Back To Movie List</button>
         </div>
+        
 
     )
 }

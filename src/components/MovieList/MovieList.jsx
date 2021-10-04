@@ -13,7 +13,10 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
-    const goMovieDetails = () => {
+    const goMovieDetails = ( movie ) => {
+        dispatch({ type: 'FETCH_MOVIE_DETAILS', payload: movie })
+        dispatch({ type: 'FETCH_MOVIE_GENRES', payload: movie })
+
         history.push('/details')
     }
 
@@ -30,7 +33,7 @@ function MovieList() {
                     return (
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <img onClick={goMovieDetails} src={movie.poster} alt={movie.title}/>
+                            <img onClick={ () => goMovieDetails(movie) } src={movie.poster} alt={movie.title}/>
                         </div>
                     );
                 })}

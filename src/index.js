@@ -40,7 +40,7 @@ function* postNewMovie( action ){
 function* fetchMovieGenres( action ){
     try{
         const genre = action.payload;
-        const movieGenre = yield axios.get( `/api/genre/movie-poop/${genre.id}` )
+        const movieGenre = yield axios.get( `/api/genre/${genre.id}` )
         yield put({ type: 'SET_MOVIE_GENRE', payload: movieGenre.data })
     } catch( error ) {
         console.log('Error in GET fetchMovieGenre', error);

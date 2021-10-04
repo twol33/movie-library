@@ -18,6 +18,7 @@ function MovieDetails() {
     return(
         <div key={ movie.id }>
             <p>{ movieToDisplay.description }</p>
+            <h2>Categories</h2>
             {genre.map( genres => (
                 <p>{genres.name}</p>
             ))}

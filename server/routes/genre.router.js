@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   res.sendStatus(500)
 });
 
-router.get('/movie-poop/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const queryText = `
   SELECT "genres"."name" FROM "genres"
   JOIN "movies_genres"

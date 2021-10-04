@@ -55,16 +55,16 @@ function MovieNewAdd() {
                     onChange={ (event) => setNewMovie({...newMovie, poster: event.target.value })} 
                 />
 
-                {/* <input 
+                <input 
                     type='text' 
                     placeholder='Genre' 
                     value={newMovie.genre_id} 
                     onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} 
-                /> */}
+                />
 
-                <select name='selectList' id='select-list'>
-                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value="Adventure" >Adventure</option>
-                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Animated</option>
+                {/* <select>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: 1 })}  >Adventure</option>
+                    <option onClick={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={2} >Animated</option>
                     <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Biographical</option>
                     <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Comedy</option>
                     <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Disaster</option>
@@ -76,7 +76,7 @@ function MovieNewAdd() {
                     <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Science Fiction</option>
                     <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Space-Opera</option>
                     <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Superhero</option>
-                </select>
+                </select> */}
 
                 <button type='submit' >Save</button>
                 <button onClick={cancelGo}>Cancel</button>

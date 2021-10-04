@@ -1,7 +1,10 @@
 import { useDispatch } from "react-redux";
 import { useState } from 'react';
+import { useHistory } from "react-router";
 
 function MovieNewAdd() {
+    const dispatch = useDispatch();
+    const history = useHistory()
 
     let updateObjects = {
         title: ' ',
@@ -12,12 +15,14 @@ function MovieNewAdd() {
 
     let [ newMovie, setNewMovie ] = useState({updateObjects})
 
-    const dispatch = useDispatch();
-
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch({ type: 'POST_NEW_MOVIE', payload: newMovie })
         console.log(newMovie);
+        history.push('/')
+    }
+
+    const cancelGo = () => {
         history.push('/')
     }
 
@@ -56,6 +61,7 @@ function MovieNewAdd() {
                     onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} 
                 />
                 <button type='submit' >Save</button>
+                <button onClick={cancelGo}>Cancel</button>
             </form>
         </div>
     )

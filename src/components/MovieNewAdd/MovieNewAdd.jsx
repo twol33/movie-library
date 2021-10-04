@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function MovieNewAdd() {
 
-    const updateObjects ={
+    let updateObjects ={
         title: '',
         description: '',
         poster: '',
@@ -12,7 +12,7 @@ function MovieNewAdd() {
 
     let [ newMovie, setNewMovie ] = useState({updateObjects})
 
-    const dispatch = useDispatch
+    const dispatch = useDispatch();
 
     const handleSubmit = (newMovie) => {
         dispatch({ type: 'POST_NEW_MOVIE', payload: newMovie })

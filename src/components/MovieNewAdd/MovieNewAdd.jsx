@@ -27,10 +27,10 @@ function MovieNewAdd() {
         <div>
             <h2>Add a New Movie</h2>
             <form onSubmit >
-                <input type='text' placeholder='title' onChange={ (event) => submitTitle( event.target.value )} />
-                <input type='text' placeholder='description' onChange={ (event) => submitDescription( event.target.value )} />
-                <input type='text' placeholder='url' onChange={ (event) => submitPoster( event.target.value )} />
-                <input type='text' placeholder='genre' onChange={ (event) => submitGenre_id( event.target.value )} />
+                <input type='text' placeholder='title' value={title} onChange={ (event) => submitTitle( event.target.value )} />
+                <input type='text' placeholder='description' value={description} onChange={ (event) => submitDescription( event.target.value )} />
+                <input type='text' placeholder='url' value={poster} onChange={ (event) => submitPoster( event.target.value )} />
+                <input type='text' placeholder='genre' value={genre_id} onChange={ (event) => submitGenre_id( event.target.value )} />
             </form>
         </div>
     )

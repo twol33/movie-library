@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { useState } from 'react';
 
 function MovieNewAdd() {
     const [ newTitle, submitTitle ] = useState({ title: '' })
@@ -17,9 +18,9 @@ function MovieNewAdd() {
     const addNewMovie = event => {
         event.preventDefault();
         dispatch({ type: "POST_NEW_MOVIE_TITLE", payload: newTitle })
-        dispatch({ type: "POST_NEW_MOVIE_TITLE", payload: newDescription })
-        dispatch({ type: "POST_NEW_MOVIE_TITLE", payload: newPoster })
-        dispatch({ type: "POST_NEW_MOVIE_TITLE", payload: newGenre_id })
+        dispatch({ type: "POST_NEW_MOVIE_DESCRIPTION", payload: newDescription })
+        dispatch({ type: "POST_NEW_MOVIE_POSTER", payload: newPoster })
+        dispatch({ type: "POST_NEW_MOVIE_GENRE_ID", payload: newGenre_id })
     }
 
       const handleSubmitTitle = event => {
@@ -60,7 +61,10 @@ function MovieNewAdd() {
         <div>
             <h2>Add a New Movie</h2>
             <form>
-
+                <input type='text' placeholder='title' value={newTitle} onChange={handleSubmitTitle} />
+                <input type='text' placeholder='description' value={newDescription} onChange={handleSubmitDescription} />
+                <input type='text' placeholder='url' value={newPoster} onChange={handleSubmitPoster} />
+                <input type='text' placeholder='genre' value={newGenre_id} onChange={handleSubmitGenre_id} />
             </form>
             {/* <form onSubmit >
                 <input type='text' placeholder='title' value={title} onChange={ (event) => submitTitle( event.target.value )} />

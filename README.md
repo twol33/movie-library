@@ -11,7 +11,7 @@ Movie Selection
     The project is built on Postgres, so you will need to make sure to have that installed. 
     
     We recommend using Postico to run those queries as that was used to create the queries,
-    
+
     1. Open up your editor of choice and run an npm install
     2. Run npm run server in your terminal
     3. Run npm run client in your terminal
@@ -40,6 +40,12 @@ The tasks were:
 8. Lastly, if a new movie was saved, navigation will take the user back to the home page where the new movie should appear on the movie list.
 
 
-Your project description goes here. What problem did you solve? How did you solve it?
+# Built with:
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+    - React
+    - VSCode
+    - Postico
+
+# Acknowledgement
+
+    Thank you to Prime Digital Academy and their staff on the support and tools to success in accomplishing this goal.

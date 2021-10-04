@@ -30,7 +30,7 @@ function* fetchMovieDetails( action ){
 function* postNewMovie( action ){
     try{
         yield axios.post('/api/movie', action.payload);
-        // yield put({ type: 'FETCH_MOVIES' });
+        yield put({ type: 'FETCH_MOVIES' });
     }catch (error) {
         console.log('Error in post new movie', error);
         alert('Unable to add new movie')

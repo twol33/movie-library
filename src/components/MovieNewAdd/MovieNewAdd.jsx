@@ -63,7 +63,7 @@ function MovieNewAdd() {
                 /> */}
 
                 <select name='selectList' id='select-list'>
-                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Adventure</option>
+                    <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value="Adventure" >Adventure</option>
                     <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Animated</option>
                     <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Biographical</option>
                     <option onChange={ (event) => setNewMovie({...newMovie, genre_id: event.target.value })} value={newMovie.genre_id} >Comedy</option>

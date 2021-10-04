@@ -60,7 +60,7 @@ function MovieNewAdd() {
     return(
         <div>
             <h2>Add a New Movie</h2>
-            <form>
+            <form onSubmit={addNewMovie}>
                 <input type='text' placeholder='title' value={newTitle} onChange={handleSubmitTitle} />
                 <input type='text' placeholder='description' value={newDescription} onChange={handleSubmitDescription} />
                 <input type='text' placeholder='url' value={newPoster} onChange={handleSubmitPoster} />

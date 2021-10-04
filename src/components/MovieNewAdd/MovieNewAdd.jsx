@@ -16,6 +16,7 @@ function MovieNewAdd() {
 
     const handleSubmit = (newMovie) => {
         dispatch({ type: 'POST_NEW_MOVIE', payload: newMovie })
+        console.log(newMovie);
     }
 
     return(

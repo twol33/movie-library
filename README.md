@@ -1,24 +1,26 @@
-# Project Name
+## Project Name
 
 Movie Selection
 
 # Required Steps
 
-    Create a database named sagas_movies_weekend
+Create a database named sagas_movies_weekend
 
-    The queries in the tables.sql file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. 
+The queries in the tables.sql file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. 
     
-    The project is built on Postgres, so you will need to make sure to have that installed. 
+The project is built on Postgres, so you will need to make sure to have that installed. 
     
-    We recommend using Postico to run those queries as that was used to create the queries,
+We recommend using Postico to run those queries as that was used to create the queries,
 
-    1. Open up your editor of choice and run an npm install
-    2. Run npm run server in your terminal
-    3. Run npm run client in your terminal
+1. Open up your editor of choice and run an npm install
+2. Run npm run server in your terminal
+3. Run npm run client in your terminal
     
-    The npm run client command will open up a new browser tab for you!
+The npm run client command will open up a new browser tab for you!
 
 ## Description
+
+Duration: 2 days
 
 The task at hand was to use existing code to create a functioning app that would allow for a user to add a new movie to the already existing along with details, a cover, and a movie category,
 

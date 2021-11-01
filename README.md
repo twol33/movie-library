@@ -43,10 +43,10 @@ The npm run client command will open up a new browser tab for you!
 
 # Built with:
 
-    - React
-    - VSCode
-    - Postico
+ - React
+ - VSCode
+ - Postico
 
 # Acknowledgement
 
-    Thank you to Prime Digital Academy and their staff on the support and tools to success in accomplishing this goal.
+Thank you to Prime Digital Academy and their staff on the support and tools to success in accomplishing this goal.

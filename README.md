@@ -1,6 +1,4 @@
-## Project Name
-
-Movie Selection
+# Movie Selection
 
 ## Description
 
